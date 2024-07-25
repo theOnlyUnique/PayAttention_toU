@@ -1,0 +1,44 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*每个页面公共css */
+
+.inputData.data-v-57280228 {
+  display: flex;
+  justify-content: space-between;
+  max-height: 30px;
+}
+.search-result.data-v-57280228 {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.search-result-text.data-v-57280228 {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+.example-body.data-v-57280228 {
+  display: block;
+  padding: 0px;
+}
+.uni-mt-10.data-v-57280228 {
+  margin-top: 10px;
+}
+.map.data-v-57280228 {
+  height: 100vh;
+  width: 100vw;
+}
+

@@ -1,0 +1,202 @@
+{
+  "name": "智游行0.01",
+  "appid": "__UNI__8BD0B16",
+  "description": "智游行主界面",
+  "versionName": "0.02",
+  "versionCode": "100",
+  "transformPx": false,
+  // 加载页 最前面的就是初始渲染页面
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "地图"
+      }
+    },
+    {
+      "path": "pages_home/home/home",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    },
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "地图"
+      }
+    }
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "static/home.png",
+        "selectedIconPath": "static/home-selected.png"
+      },
+      {
+        "pagePath": "pages/map/index",
+        "text": "地图",
+        "iconPath": "static/map.png",
+        "selectedIconPath": "static/map-selected.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "static/my.png",
+        "selectedIconPath": "static/my-selected.png"
+      }
+    ]
+  },
+  /* 5+App特有相关 */
+  "app-plus": {
+    "usingComponents": true,
+    "nvueStyleCompiler": "uni-app",
+    "compilerVersion": 3,
+    "splashscreen": {
+      "alwaysShowBeforeRender": true,
+      "waiting": true,
+      "autoclose": true,
+      "delay": 0
+    },
+    /* 模块配置 */
+    "modules": {
+      "Geolocation": {}
+    },
+    /* 应用发布信息 */
+    "distribute": {
+      /* android打包配置 */
+      "android": {
+        "permissions": [
+          "<uses-feature android:name=\"android.hardware.camera\"/>",
+          "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+          "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+          "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+          "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+          "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+          "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>"
+        ]
+      },
+      /* ios打包配置 */
+      "ios": {
+        "dSYMs": false
+      },
+      /* SDK配置 */
+      "sdkConfigs": {
+        "ad": {},
+        "maps": {
+          "amap": {
+            "appkey_ios": "none",
+            "appkey_android": "appkey_android脱敏"
+          }
+        },
+        "geolocation": {
+          "amap": {
+            "__platform__": ["android"],
+            "appkey_ios": "none",
+            "appkey_android": "appkey_android脱敏"
+          }
+        }
+      },
+      "icons": {
+        "android": {
+          "hdpi": "unpackage/res/icons/72x72.png",
+          "xhdpi": "unpackage/res/icons/96x96.png",
+          "xxhdpi": "unpackage/res/icons/144x144.png",
+          "xxxhdpi": "unpackage/res/icons/192x192.png"
+        },
+        "ios": {
+          "appstore": "unpackage/res/icons/1024x1024.png",
+          "ipad": {
+            "app": "unpackage/res/icons/76x76.png",
+            "app@2x": "unpackage/res/icons/152x152.png",
+            "notification": "unpackage/res/icons/20x20.png",
+            "notification@2x": "unpackage/res/icons/40x40.png",
+            "proapp@2x": "unpackage/res/icons/167x167.png",
+            "settings": "unpackage/res/icons/29x29.png",
+            "settings@2x": "unpackage/res/icons/58x58.png",
+            "spotlight": "unpackage/res/icons/40x40.png",
+            "spotlight@2x": "unpackage/res/icons/80x80.png"
+          },
+          "iphone": {
+            "app@2x": "unpackage/res/icons/120x120.png",
+            "app@3x": "unpackage/res/icons/180x180.png",
+            "notification@2x": "unpackage/res/icons/40x40.png",
+            "notification@3x": "unpackage/res/icons/60x60.png",
+            "settings@2x": "unpackage/res/icons/58x58.png",
+            "settings@3x": "unpackage/res/icons/87x87.png",
+            "spotlight@2x": "unpackage/res/icons/80x80.png",
+            "spotlight@3x": "unpackage/res/icons/120x120.png"
+          }
+        }
+      }
+    }
+  },
+  /* 快应用特有相关 */
+  "quickapp": {},
+  /* 小程序特有相关 */
+  "mp-weixin": {
+    "appid": "appid脱敏",
+    "setting": {
+      "urlCheck": false,
+      "minified": true,
+      "postcss": true,
+      "es6": false
+    },
+    "usingComponents": true,
+    // 路线规划的小程序id
+    "plugins": {
+      "routePlan": {
+        "version": "1.0.18",
+        "provider": "provider对应apiId"
+      }
+    },
+    // 请求发出的信息
+    "permission": {
+      "scope.userLocation": {
+        "desc": "你的位置信息将用于小程序定位"
+      }
+    },
+    "requiredPrivateInfos": ["getLocation", "chooseLocation"],
+    "mp-weixin": {
+      "optimization": {
+        "subPackages": true
+      }
+    },
+    "runmode": "liberate"
+  },
+  "mp-alipay": {
+    "usingComponents": true
+  },
+  "mp-baidu": {
+    "usingComponents": true
+  },
+  "mp-toutiao": {
+    "usingComponents": true
+  },
+  "uniStatistics": {
+    "enable": false
+  },
+  "vueVersion": "2",
+  "locale": "zh-Hans",
+  "fallbackLocale": "zh-Hans",
+  "h5": {
+    "sdkConfigs": {
+      "maps": {
+        "qqmap": {
+          "key": "qqmap的应用Id"
+        }
+      }
+    }
+  }
+}
+// "h5" : {
+//     "sdkConfigs" : {
+//         "maps" : {
+//             "qqmap" : {
+//                 "key" : "m没有了"
+//             }
+//         }
+//     }
+// }
